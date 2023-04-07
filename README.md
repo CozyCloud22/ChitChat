@@ -1,4 +1,5 @@
 ChitChat Bot
+
 The Website Assistant ChitChat Bot is a chatbot designed to assist users on a website or club by providing relevant answers to their questions.
 
 Features
