@@ -1,3 +1,2 @@
-int main(){
-    
-}
+def main():
+    print("Hello World")
