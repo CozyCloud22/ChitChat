@@ -9,3 +9,19 @@ def open_file():
         except:
             print("\nError: File not found.")
             ask  = input("Enter CSV Filename: ")
+
+def main():
+    csv_file = open_file()
+    
+    if csv_file:
+        csv_reader = csv.reader(csv_file)
+        
+        for row in csv_reader:
+            print(row)
+        
+        csv_file.close()
+    else:
+        print("Failed to open CSV file.")
+
+if __name__ == '__main__':
+    main()
