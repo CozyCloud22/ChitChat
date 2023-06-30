@@ -16,6 +16,9 @@ classes = []
 documents = []
 ignore_letters = ['?', '!', '.', ',']
 
+"""
+These next lines take the data from intents.json and tokenize them for our AI model to use.
+"""
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = nltk.word_tokenize(pattern)
@@ -35,6 +38,9 @@ pickle.dump(classes, open('classes.pkl', 'wb'))
 training = []
 output_empty = [0] * len(classes)
 
+"""
+These next lines take the tokenized words and converts them into readable binary int for the model.
+"""
 for document in documents:
     bag = []
     word_patterns = document[0]
@@ -52,6 +58,9 @@ training = np.array(training)
 trainX = training[:, :len(words)]
 trainY = training[:, len(words):]
 
+"""
+These next lines establish the model.
+"""
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Dense(128, input_shape=(len(trainX[0]),), activation = 'relu'))
 model.add(tf.keras.layers.Dropout(0.5))
