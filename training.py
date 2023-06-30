@@ -23,9 +23,9 @@ for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = nltk.word_tokenize(pattern)
         words.extend(word_list)
-        documents.append((word_list, intent['tag']))
-        if intent['tag'] not in classes:
-            classes.append(intent['tag'])
+        documents.append((word_list, intent['tags']))
+        if intent['tags'] not in classes:
+            classes.append(intent['tags'])
 
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
@@ -55,8 +55,8 @@ for document in documents:
 random.shuffle(training)
 training = np.array(training)
 
-trainX = training[:, :len(words)]
-trainY = training[:, len(words):]
+trainX = training[:, 0]
+trainY = training[:, 1]
 
 """
 These next lines establish the model.
