@@ -50,13 +50,13 @@ for document in documents:
 
     output_row = list(output_empty)
     output_row[classes.index(document[1])] = 1
-    training.append([bag, output_row])
+    training.append(bag + output_row)
 
 random.shuffle(training)
 training = np.array(training)
 
-trainX = training[:, 0]
-trainY = training[:, 1]
+trainX = training[:, :len(words)]
+trainY = training[:, len(words):]
 
 """
 These next lines establish the model.
