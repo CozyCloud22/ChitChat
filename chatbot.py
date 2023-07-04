@@ -78,7 +78,7 @@ def get_response(intents_list, intents_json):
          #   print("I don't know~")
     return result
 
-print("Chatbot Running. 'exit' to stop")
+print("Chatbot Running. 'exit' to stop.")
 
 #while True:
  #   message = input("")
