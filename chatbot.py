@@ -1,3 +1,4 @@
+#imports
 import random
 import json
 import pickle
@@ -8,7 +9,6 @@ nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-
 intents = json.loads(open('intents.json').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
@@ -17,7 +17,7 @@ model = tf.keras.models.load_model('chatbot_model.h5')
 
 def clean_up_sentence(sentence):
     """
-    Cleans up sentence.
+    Cleans up sentence. Lemmatizer reduces/simplifies the word into a base form in order to better identify the meanings of words.
     :param sentence: Untokenized words.
     :return: Tokenized words.
     """
@@ -28,7 +28,7 @@ def clean_up_sentence(sentence):
 
 def bag_of_words(sentence):
     """
-    Converts sentence into bag of words.
+    Converts the cleaned up sentence into a comparison between it and the trained model.
     :param sentence:
     :return: 
     """
@@ -63,31 +63,23 @@ def predict_class(sentence):
 
 def get_response(intents_list, intents_json):
     """
-    Function
     :param intents_list:
     :param intents_json:
     :return:
     """
+
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tags'] == tag:
             result = random.choice(i['responses'])
             break
-        #else:
-         #   print("I don't know~")
     return result
 
 print("Chatbot Running. 'exit' to stop.")
 
-#while True:
- #   message = input("")
-  #  ints = predict_class(message)
-   # res = get_response(ints, intents)
-   # print(res)
-
+#while loop to keep the bot running until user wants to exit
 while True:
-    #message = "hi"
     try:
         message = input("")
         ints = predict_class(message)
