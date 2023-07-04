@@ -1,18 +1,18 @@
 {"intents": [
   {"tags": "start_time",
-    "patterns": ["What time does the Artificial Intelligence club meet?"],
+    "patterns": ["What time does the Artificial Intelligence club meet?", "When does club start?", "What time should be I be at club?"],
     "responses": ["The Artificial Intelligence club meets at 6 pm."]
    },
   {"tags": "location",
-    "patterns": ["Where does the AI club meet?"],
+    "patterns": ["Where does the AI club meet?", "Where are club meetings?", "Where does the Artificial Intelligence club meet?"],
     "responses": ["The Artificial Intelligence club meets in the second floor of the STEM building."]
    },
   {"tags": "frequency",
-    "patterns": ["How often does the AI club meet?"],
+    "patterns": ["How often does the AI club meet?", "How often does the Artificial Intelligence club meet?", "How many times a week does club meet?"],
     "responses": ["AI club meets once a week."]
    },
   {"tags": "roles",
-    "patterns": ["What roles make up the Artificial Intelligence club board?"],
+    "patterns": ["What roles make up the Artificial Intelligence club board?", "What board positions are there?"],
     "responses": ["The board consists of a president, vice president, secretary, workshop coordinator, treasurer, marketing coordinator, event coordinator, and project coordinators."]
    },
   {"tags": "become_member",
