@@ -20,7 +20,7 @@ documents = []
 ignore_letters = ['?', '!', '.', ',']
 
 """
-These next lines take the data from intents.json and tokenize them for our AI model to use.
+These next lines take the data from intents.json and tokenize them for our AI model to use. The for loop basically runs a check for if the "topic" already exists.
 """
 for intent in intents['intents']:
     for pattern in intent['patterns']:
