@@ -3,8 +3,8 @@ import json
 import pickle
 import numpy as np
 import tensorflow as tf
-
 import nltk
+nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
@@ -74,13 +74,28 @@ def get_response(intents_list, intents_json):
         if i['tags'] == tag:
             result = random.choice(i['responses'])
             break
-
+        #else:
+         #   print("I don't know~")
     return result
 
-print("Chatbot Running")
+print("Chatbot Running. 'exit' to stop")
+
+#while True:
+ #   message = input("")
+  #  ints = predict_class(message)
+   # res = get_response(ints, intents)
+   # print(res)
 
 while True:
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
+    #message = "hi"
+    try:
+        message = input("")
+        ints = predict_class(message)
+        res = get_response(ints,intents)
+        if(message != "exit"):
+            print(res)
+    except:
+        print("Sorry I don't know~")
+    if(message == "exit"):
+        break
+

@@ -5,7 +5,10 @@ import numpy as np
 import tensorflow as tf
 
 import nltk
+nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
+
+
 
 lemmatizer = WordNetLemmatizer()
 
@@ -26,6 +29,7 @@ for intent in intents['intents']:
         documents.append((word_list, intent['tags']))
         if intent['tags'] not in classes:
             classes.append(intent['tags'])
+            
 
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
