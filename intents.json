@@ -1,6 +1,6 @@
 {"intents": [
   {"tags": "start_time",
-    "patterns": ["What time does the Artificial Intelligence club meet?", "When does club start?", "What time should be I be at club?"],
+    "patterns": ["What time does the Artificial Intelligence club meet?", "When does club start?", "What time should be I be at club?", "When do I arrive?"],
     "responses": ["The Artificial Intelligence club meets at 6 pm."]
    },
   {"tags": "location",
@@ -32,7 +32,7 @@
     "responses": ["You should contact msuaiclub@gmail.com."]
    },
   {"tags": "social_media",
-    "patterns": ["What social medias does AI club have?", "Are there other platforms where I can find more information on the Artificial Intelligence club?"],
+    "patterns": ["What social medias does AI club have?", "Are there other platforms where I can find more information on the Artificial Intelligence club?", "Is there an Instagram?", "Is there a LinkedIn?", "What's the discord?"],
     "responses": ["The Ai club has an Instagram (msu_ai_club), a Discord, and a LinkedIn (AI Club at MSU)."]
    },
   {"tags": "equipment",
@@ -45,7 +45,7 @@
    },
   {"tags": "merch",
     "patterns": ["Is there club merch I can buy?"],
-    "responses": ["Not as of right now. We do occasionally give away our merch though!"]
+    "responses": ["Not as of right now. We do occasionally give away our merch though! Be sure to attend our events!"]
    },
   {"tags": "e_board_app",
     "patterns": ["How do I apply to be on the AI club board?"],
@@ -80,7 +80,7 @@
     "responses": ["There are none! Drop by and see us during our meetings anytime!"]
    },
   {"tags": "fee",
-    "patterns": ["Is there a fee to join the AI club?"],
+    "patterns": ["Is there a fee to join the AI club?", "Will there be fees involved?", "Do I have to pay "],
     "responses": ["There is no fee to join our club at all! Our expenses are all covered by generous sponsors and the college :)"]
    },
   {"tags": "remote",
@@ -88,8 +88,8 @@
     "responses": ["We currently don't support joining remotely. However, we do post every single workshop so even if you miss it you can review the material!"]
    },
   {"tags": "newsletter",
-    "patterns": ["How can I sign up for the AI club newsletter?"],
-    "responses": ["We will release the newsletters periodically and announce them through our socials!."]
+    "patterns": ["How can I sign up for the AI club newsletter?", "Is there a newsletter?", "Where can I find the AI club newsletter?  "],
+    "responses": ["Yes, we have a newsletter. We will release the newsletters periodically and announce them through our socials!."]
    },
   {"tags": "benefits",
     "patterns": ["What are some of the benefits of joining the AI club?"],

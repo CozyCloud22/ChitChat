@@ -8,6 +8,16 @@ import nltk
 nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from collections import OrderedDict
+
+cred = credentials.Certificate('C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-n6uhf-bb568fa453.json')
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://chitchat-317ed-default-rtdb.firebaseio.com/'
+})
+
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
@@ -60,6 +70,7 @@ def predict_class(sentence):
 
     return return_list
 
+    
 
 def get_response(intents_list, intents_json):
     """
@@ -84,10 +95,22 @@ while True:
         message = input("")
         ints = predict_class(message)
         res = get_response(ints,intents)
+        
         if(message != "exit"):
             print(res)
+            
     except:
         print("Sorry I don't know~")
+    
+    tempOutput = get_response(ints,intents)
+    #direct upload to google reak time database
+    if(message != "exit"):
+        ref = db.reference('/User_Input')
+        ref.push().set(OrderedDict([
+            ('User_Input', message),
+            ('Model_Output', tempOutput)
+        ]))
+    
     if(message == "exit"):
         break
 
