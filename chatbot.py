@@ -13,7 +13,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 from collections import OrderedDict
 
-cred = credentials.Certificate('C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-n6uhf-bb568fa453.json')
+cred = credentials.Certificate('C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-iig8w-dd515155ca.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://chitchat-317ed-default-rtdb.firebaseio.com/'
 })
@@ -91,6 +91,7 @@ print("Chatbot Running. 'exit' to stop.")
 
 #while loop to keep the bot running until user wants to exit
 while True:
+    flag = False
     try:
         message = input("")
         ints = predict_class(message)
@@ -100,17 +101,21 @@ while True:
             print(res)
             
     except:
+        flag = True
+        if(message == "exit"):
+            break
         print("Sorry I don't know~")
     
-    tempOutput = get_response(ints,intents)
-    #direct upload to google reak time database
-    if(message != "exit"):
-        ref = db.reference('/User_Input')
-        ref.push().set(OrderedDict([
-            ('User_Input', message),
-            ('Model_Output', tempOutput)
-        ]))
+    #setting up a flag variable so program doesn't error if it goes through the except statement
+    if(flag == False):
+        tempOutput = get_response(ints,intents)
+        #direct upload to google reak time database
+        if(message != "exit"):
+            ref = db.reference('/User_Input')
+            ref.push().set(OrderedDict([
+                ('User_Input', message),
+                ('Model_Output', tempOutput)
+            ]))
     
-    if(message == "exit"):
-        break
+
 
