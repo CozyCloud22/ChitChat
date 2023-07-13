@@ -1,7 +1,8 @@
 # For some reason it doesnt like the run button on the right use the "Run" "Start Debugging" or "Start Without Debugging"
 from autocorrect import Speller
+# uh for this pip install autocorrect
 from gingerit.gingerit import GingerIt
-
+# and for this pip install gingerit
 def spellchecker(input_message):
     spell = Speller()
 
