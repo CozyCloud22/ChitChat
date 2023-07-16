@@ -13,6 +13,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 from collections import OrderedDict
 
+# Have to download file and have it as a local copy and change the path from Darrian's to your own. Ask Darrian if needed.
 cred = credentials.Certificate('C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-n6uhf-bb568fa453.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://chitchat-317ed-default-rtdb.firebaseio.com/'
@@ -92,7 +93,7 @@ while True:
             print(res)
             
     except:
-        print("Sorry I don't know~")
+        print("Sorry I don't know. Please check spelling.~")
     
     tempOutput = get_response(ints,intents)
     #direct upload to google reak time database
