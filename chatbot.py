@@ -5,8 +5,6 @@ import numpy as np
 import tensorflow as tf
 import nltk
 from nltk.stem import WordNetLemmatizer
-<<<<<<< HEAD
-=======
 
 import firebase_admin
 from firebase_admin import credentials
@@ -19,7 +17,6 @@ firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://chitchat-317ed-default-rtdb.firebaseio.com/'
 })
 
->>>>>>> parent of b055e76 (Logging system + real time database update)
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
@@ -78,12 +75,6 @@ def get_response(intents_list, intents_json):
     return result
 print("Chatbot Running")
 while True:
-<<<<<<< HEAD
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
-=======
     try:
         message = input("")
         ints = predict_class(message)
@@ -107,4 +98,3 @@ while True:
     if(message == "exit"):
         break
 
->>>>>>> parent of b055e76 (Logging system + real time database update)
