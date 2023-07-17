@@ -36,55 +36,55 @@
     "responses": ["The Ai club has an Instagram (msu_ai_club), a Discord, and a LinkedIn (AI Club at MSU)."]
    },
   {"tags": "equipment",
-    "patterns": ["Do I need to bring anything to club?", "What do I need to bring to club?"],
+    "patterns": ["Do I need to bring anything to club?", "What do I need to bring to club?", "Are there materials I need to bring?"],
     "responses": ["You will need to bring a laptop and that is all!", "You will need a laptop and a ready-to-learn attitude!"]
    },
   {"tags": "rules",
-    "patterns": ["Are there any rules I need to know?"],
+    "patterns": ["Are there any rules I need to know?", "What rules do I have to follow"],
     "responses": ["Yes, all of our rules are in our Discord. In general, be aware of what you're saying and doing to others."]
    },
   {"tags": "merch",
-    "patterns": ["Is there club merch I can buy?"],
+    "patterns": ["Is there club merch I can buy?",  "Where can I buy club merch?", "Where can I buy AI club merchendise?"],
     "responses": ["Not as of right now. We do occasionally give away our merch though! Be sure to attend our events!"]
    },
   {"tags": "e_board_app",
-    "patterns": ["How do I apply to be on the AI club board?"],
-    "responses": ["Our board applications open in the end of spring and beginning of fall."]
+    "patterns": ["How do I apply to be on the AI club board?", "How do I be on the board?"],
+    "responses": ["Our open board spots will have applications open in the end of spring and beginning of fall. We will post about it in our Discord!"]
    },
   {"tags": "member_count",
-    "patterns": ["How many members does AI club have?"],
+    "patterns": ["How many members does AI club have?", "How many people are in the club?"],
     "responses": ["We have nearly 900 members in our discord and is currently the largest engineering club on campus!"]
    },
   {"tags": "not_student",
-    "patterns": ["Can I join if I'm not a MSU student?"],
-    "responses": ["Yes you can! All are welcome."]
+    "patterns": ["Can I join if I'm not a MSU student?", "Can I show up to workshops if I'm not a student at MSU?", "I am an incoming student to MSU, can I still participate?", "My major isn't engineering, can I come?"],
+    "responses": ["Yes you can! All are welcome!"]
    },
   {"tags": "beginner",
-    "patterns": ["Can I join the AI club if I'm a beginner in AI?"],
+    "patterns": ["Can I join the AI club if I'm a beginner in AI?", "Can I participate if I don't know anything about AI?", "Can I participate if I don't know what artificial intelligence is?"],
     "responses": ["Absolutely! We have members from all sorts of disciplines and expertise levels."]
    },
   {"tags": "language",
-    "patterns": ["What programming languages are used in the AI club?"],
-    "responses": ["We typically use Python."]
+    "patterns": ["What programming languages are used in the AI club?", "What coding language is used?", "What language do I you use?"],
+    "responses": ["We primarily use Python."]
    },
   {"tags": "academic_credit",
-    "patterns": ["Can I receive academic credit for participating in the AI club?"],
+    "patterns": ["Can I receive academic credit for participating in the AI club?", "Can I recieve extra credit or acadmic credits for coming to club?"],
     "responses": ["Unfortunately, our club does not offer academic credit as this is an extracurricular activity."]
    },
   {"tags": "scholarship",
-    "patterns": ["Are there any scholarship opportunities through the AI club?"],
-    "responses": ["As of now, there are currently no scholarship oppurtunities with the AI club."]
+    "patterns": ["Are there any scholarship opportunities through the AI club?", "Does AI club offer any scholarships?", "Are there potential scholarships I can earn at club?"],
+    "responses": ["As of now, there are no scholarship oppurtunities with the AI club."]
    },
   {"tags": "prerequisites",
-    "patterns": ["Are there any prerequisites to joining the AI club?"],
+    "patterns": ["Are there any prerequisites to joining the AI club?", "Is there an interview process to join the club?"],
     "responses": ["There are none! Drop by and see us during our meetings anytime!"]
    },
   {"tags": "fee",
-    "patterns": ["Is there a fee to join the AI club?", "Will there be fees involved?", "Do I have to pay "],
+    "patterns": ["Is there a fee to join the AI club?", "Will there be fees involved?", "Do I have to pay?"],
     "responses": ["There is no fee to join our club at all! Our expenses are all covered by generous sponsors and the college :)"]
    },
   {"tags": "remote",
-    "patterns": ["Can I attend the AI club's meetings remotely?"],
+    "patterns": ["Can I attend the AI club's meetings remotely?", "Is there a remote option to attend meetings?", "Can I join meetings virtually?", "Can I join meetings virtually?"],
     "responses": ["We currently don't support joining remotely. However, we do post every single workshop so even if you miss it you can review the material!"]
    },
   {"tags": "newsletter",
@@ -92,27 +92,27 @@
     "responses": ["Yes, we have a newsletter. We will release the newsletters periodically and announce them through our socials!."]
    },
   {"tags": "benefits",
-    "patterns": ["What are some of the benefits of joining the AI club?"],
-    "responses": ["Not only are our club meetings an excellent way to learn artificial intelligence concepts, but we also teach our members on actually applying these concepts. We also provide networking, additional education, and fun oppurtunities for members."]
+    "patterns": ["What are some of the benefits of joining the AI club?", "what do I get for joining club?", "Why should I join?", "Why should I join AI club?","Why should I join the artificial intelligence club?"],
+    "responses": ["Not only are our club meetings an excellent way to learn artificial intelligence concepts, but we also teach our members about actually applying these concepts. We also provide networking, additional education, and fun oppurtunities for members."]
    },
   {"tags": "dress",
-    "patterns": ["How should I dress?"],
+    "patterns": ["How should I dress?", "is there a dress code?"],
     "responses": ["Dress however you want! This is a club meeting, we don't set any dress codes."]
    },
   {"tags": "what_do_i_do",
-    "patterns": ["What do I do in club?"],
+    "patterns": ["What do I do in club?", "what will I do in club?", "What will we be doing at club meetings?"],
     "responses": ["We will provide a workshop where you will learn about a topic then get hands on time to apply the learned material into code."]
    },
   {"tags": "summer",
-    "patterns": ["Are there any activities over the summer?"],
-    "responses": ["No activities! Enjoy your break!"]
+    "patterns": ["Are there any activities over the summer?", "Does AI club hold meetings over summer?", "Are there any summer meetings?"],
+    "responses": ["No activities or meetings! Enjoy your break!"]
    },
   {"tags": "missed_meeting",
     "patterns": ["I missed a meeting. Where can I find what I missed?"],
     "responses": ["All the workshop presentations are posted on our website!"]
    },
   {"tags": "involved",
-    "patterns": ["I want to be more involved with club. What can I do?"],
+    "patterns": ["I want to be more involved with club. What can I do?", "How can I be more involved?"],
     "responses": ["Come to our meetings and participate in the projects we'll announce! We love to see your enthusiasm in these things!"]
    },
   {"tags": "networking",
@@ -124,15 +124,15 @@
     "responses": ["This is an excellent question for the project coordinators! Please contact the club email: msuaiclub@gmail.com and we will reach back out!"]
    },
   {"tags": "hackathon",
-    "patterns": ["Is the AI club involved in any competitions or hackathons?"],
-    "responses": ["Yes, we host our very own hackathon for our project members! This will be announced through our social later in the year so stay tuned!"]
+    "patterns": ["Is the AI club involved in any competitions or hackathons?", "Does club have any hackathons?", "Are there competitions in the club?"],
+    "responses": ["Yes, we host our very own hackathon for our project members! This will be announced through our socials later in the year so stay tuned!"]
    },
   {"tags": "topics",
-    "patterns": ["What topics are covered in club?"],
+    "patterns": ["What topics are covered in club?", "What topics will we go over?"],
     "responses": ["We go over many artificial intelligence fundementals and then explore deeper topics. Examples include nueral networks, CNNs, multilayer perceptions, Streamlit, and more!"]
    },
   {"tags": "friends",
-    "patterns": ["Are there any chances to socialize?"],
+    "patterns": ["Are there any chances to socialize?", "Are there social events?", "Do you host any social events?"],
     "responses": ["Yes, we host several social nights for our members to get to know each other better!"]
    }
 ]}
