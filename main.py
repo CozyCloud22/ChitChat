@@ -28,7 +28,7 @@ def tokenize(data):
 
 def lemmatizer(data):
     """
-    No idea what this does.
+    Lemmatizes words, which means it groups different inflected forms of the same word so the NLP can more easily process it.
     :param data:
     :return:
     """

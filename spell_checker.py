@@ -3,6 +3,10 @@ from autocorrect import Speller
 # uh for this pip install autocorrect
 from gingerit.gingerit import GingerIt
 # and for this pip install gingerit
+
+"""
+Uses Speller from the autocorrect library to correct typos in the input message
+"""
 def spellchecker(input_message):
     spell = Speller()
 
@@ -13,6 +17,10 @@ def spellchecker(input_message):
     corrected_message = ' '.join(corrected_words)
     return corrected_message
 
+
+"""
+Uses GingerIt to correct spelling and grammar mistakes based on the context of the sentence
+"""
 def sentence_correction(input_message):
     parser = GingerIt()
 
@@ -22,6 +30,10 @@ def sentence_correction(input_message):
 
     return corrected_sentence
 
+
+"""
+Test code
+"""
 input_message = input("Enter a message: ")
 
 corrected_message = spellchecker(input_message)
