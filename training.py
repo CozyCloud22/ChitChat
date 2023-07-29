@@ -8,8 +8,6 @@ import nltk
 nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 
-
-
 lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('intents.json').read())

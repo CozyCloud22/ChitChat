@@ -13,7 +13,7 @@ from collections import OrderedDict
 
 # Have to download file and have it as a local copy and change the path from Darrian's to your own. Ask Darrian if needed.
 cred = credentials.Certificate(
-    'C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-n6uhf-bb568fa453.json')
+    'C:\\Users\\dcnat\\OneDrive\\Desktop\\Coding-Projects\\ChitChat\\chitchat-317ed-firebase-adminsdk-iig8w-dd515155ca.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://chitchat-317ed-default-rtdb.firebaseio.com/'
 })
@@ -74,6 +74,7 @@ def get_response(intents_list, intents_json):
     :param intents_json:
     :return:
     """
+    #try:
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
@@ -85,8 +86,9 @@ def get_response(intents_list, intents_json):
             result = random.choice(i['responses'])
             break
     return result
-
-
+    #except:
+     #   print("Sorry, the question is unclear, could you please specify?")
+        
 print("Chatbot Running")
 while True:
     try:
